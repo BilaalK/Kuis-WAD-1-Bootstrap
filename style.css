@@ -1,0 +1,121 @@
+body {
+    background-color: rgb(239, 241, 228);
+    color: rgb(25, 71, 52);
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    width: 100%;
+    background-color: #f1f1f1;
+}
+
+.progress-container {
+    width: 100%;
+    height: 5px;
+    background: #ccc;
+    margin-left: -16px;
+}
+
+.progress-bar {
+    height: 5px;
+    background: #1d6446;
+    width: 0%;
+}
+
+.garis-dan-merah {
+    text-decoration: underline;
+    text-decoration-color: red;
+    color: red;
+    background: transparent;
+}
+
+.footerBg {
+    background: rgba(0, 0, 0, 0.034);
+}
+
+.carousel {
+    overflow: hidden
+}
+
+.container-yt {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    padding-top: 56.25%;
+    /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
+}
+
+
+/* Then style the iframe to fit in the container div with full height and width */
+
+.responsive-iframe {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    max-height: 65%;
+    max-width: 65%;
+}
+
+hr.solid {
+    margin-top: 80px;
+    border-top: 3px solid rgb(92, 92, 92);
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
+    .responsive-iframe {
+        top: 90%;
+    }
+}
+
+#ul {
+    display: flex;
+    flex-wrap: wrap;
+    color: transparent;
+    margin-left: -32px;
+}
+
+#li {
+    height: 40vh;
+    flex-grow: 1;
+}
+
+.gal-link {
+    max-height: 100%;
+    min-width: 100%;
+    object-fit: cover;
+    vertical-align: bottom;
+}
+
+@media (max-aspect-ratio: 1/1) {
+    #li {
+        height: 20vh;
+    }
+}
+
+@media (max-height: 480px) {
+    #li {
+        height: 80vh;
+    }
+}
+
+@media (max-aspect-ratio: 1/1) and (max-width: 480px) {
+    #ul {
+        flex-direction: row;
+    }
+    #li {
+        height: auto;
+        width: 100%;
+    }
+    .gal-link {
+        width: 100%;
+        max-height: 75vh;
+        min-width: 0;
+    }
+}
